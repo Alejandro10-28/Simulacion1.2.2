@@ -35,6 +35,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlarriba = new System.Windows.Forms.Panel();
             this.pntablero = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -61,12 +66,6 @@
             this.bunifuCustomLabel6 = new ns1.BunifuCustomLabel();
             this.bunifuCustomLabel7 = new ns1.BunifuCustomLabel();
             this.txtCantidad = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.dgvDistribucionTriangular = new System.Windows.Forms.DataGridView();
-            this.CPersona = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cvalor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CNumAleatorio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Crj = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cri = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvPseudoaleatorio = new System.Windows.Forms.DataGridView();
             this.Cvalores = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Crn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -80,16 +79,22 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pbcRestaurar = new System.Windows.Forms.PictureBox();
             this.pbxCerrar = new System.Windows.Forms.PictureBox();
+            this.dgvDistribucionTriangular = new System.Windows.Forms.DataGridView();
+            this.Cpersona1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cvar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CNumA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Crj1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cri1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlarriba.SuspendLayout();
             this.pntablero.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDistribucionTriangular)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPseudoaleatorio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGenerador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbcRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDistribucionTriangular)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlarriba
@@ -101,20 +106,20 @@
             this.pnlarriba.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlarriba.Location = new System.Drawing.Point(0, 0);
             this.pnlarriba.Name = "pnlarriba";
-            this.pnlarriba.Size = new System.Drawing.Size(870, 40);
+            this.pnlarriba.Size = new System.Drawing.Size(823, 40);
             this.pnlarriba.TabIndex = 57;
             // 
             // pntablero
             // 
             this.pntablero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(32)))), ((int)(((byte)(156)))));
+            this.pntablero.Controls.Add(this.dgvDistribucionTriangular);
             this.pntablero.Controls.Add(this.groupBox2);
             this.pntablero.Controls.Add(this.groupBox1);
-            this.pntablero.Controls.Add(this.dgvDistribucionTriangular);
             this.pntablero.Controls.Add(this.dgvPseudoaleatorio);
             this.pntablero.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pntablero.Location = new System.Drawing.Point(0, 40);
             this.pntablero.Name = "pntablero";
-            this.pntablero.Size = new System.Drawing.Size(870, 552);
+            this.pntablero.Size = new System.Drawing.Size(823, 552);
             this.pntablero.TabIndex = 58;
             // 
             // groupBox2
@@ -136,7 +141,7 @@
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
             this.groupBox2.Location = new System.Drawing.Point(0, 271);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(298, 281);
+            this.groupBox2.Size = new System.Drawing.Size(271, 281);
             this.groupBox2.TabIndex = 33;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Distribución Triangular";
@@ -262,7 +267,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(298, 277);
+            this.groupBox1.Size = new System.Drawing.Size(271, 277);
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Numeros Generados";
@@ -393,46 +398,6 @@
             this.txtCantidad.Size = new System.Drawing.Size(100, 26);
             this.txtCantidad.TabIndex = 6;
             // 
-            // dgvDistribucionTriangular
-            // 
-            this.dgvDistribucionTriangular.AllowUserToAddRows = false;
-            this.dgvDistribucionTriangular.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDistribucionTriangular.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CPersona,
-            this.Cvalor,
-            this.CNumAleatorio,
-            this.Crj,
-            this.Cri});
-            this.dgvDistribucionTriangular.Location = new System.Drawing.Point(316, 304);
-            this.dgvDistribucionTriangular.Name = "dgvDistribucionTriangular";
-            this.dgvDistribucionTriangular.Size = new System.Drawing.Size(541, 248);
-            this.dgvDistribucionTriangular.TabIndex = 27;
-            // 
-            // CPersona
-            // 
-            this.CPersona.HeaderText = "Personas";
-            this.CPersona.Name = "CPersona";
-            // 
-            // Cvalor
-            // 
-            this.Cvalor.HeaderText = "Valor";
-            this.Cvalor.Name = "Cvalor";
-            // 
-            // CNumAleatorio
-            // 
-            this.CNumAleatorio.HeaderText = "PseudoAleatorio";
-            this.CNumAleatorio.Name = "CNumAleatorio";
-            // 
-            // Crj
-            // 
-            this.Crj.HeaderText = "Rj";
-            this.Crj.Name = "Crj";
-            // 
-            // Cri
-            // 
-            this.Cri.HeaderText = "Ri";
-            this.Cri.Name = "Cri";
-            // 
             // dgvPseudoaleatorio
             // 
             this.dgvPseudoaleatorio.AllowUserToAddRows = false;
@@ -470,7 +435,7 @@
             this.dgvPseudoaleatorio.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvPseudoaleatorio.EnableHeadersVisualStyles = false;
             this.dgvPseudoaleatorio.GridColor = System.Drawing.Color.Black;
-            this.dgvPseudoaleatorio.Location = new System.Drawing.Point(316, 0);
+            this.dgvPseudoaleatorio.Location = new System.Drawing.Point(282, 3);
             this.dgvPseudoaleatorio.Name = "dgvPseudoaleatorio";
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -541,7 +506,7 @@
             this.btnGrafico.IconVisible = true;
             this.btnGrafico.IconZoom = 50D;
             this.btnGrafico.IsTab = false;
-            this.btnGrafico.Location = new System.Drawing.Point(5, 152);
+            this.btnGrafico.Location = new System.Drawing.Point(5, 134);
             this.btnGrafico.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnGrafico.Name = "btnGrafico";
             this.btnGrafico.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(42)))), ((int)(((byte)(74)))));
@@ -549,7 +514,7 @@
             this.btnGrafico.OnHoverTextColor = System.Drawing.Color.White;
             this.btnGrafico.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnGrafico.selected = false;
-            this.btnGrafico.Size = new System.Drawing.Size(118, 47);
+            this.btnGrafico.Size = new System.Drawing.Size(118, 36);
             this.btnGrafico.TabIndex = 33;
             this.btnGrafico.Text = "Grafica";
             this.btnGrafico.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -585,7 +550,7 @@
             this.BtnCalcu.OnHoverTextColor = System.Drawing.Color.White;
             this.BtnCalcu.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.BtnCalcu.selected = false;
-            this.BtnCalcu.Size = new System.Drawing.Size(136, 47);
+            this.BtnCalcu.Size = new System.Drawing.Size(117, 36);
             this.BtnCalcu.TabIndex = 32;
             this.BtnCalcu.Text = "Calcular";
             this.BtnCalcu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -612,7 +577,7 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.Red;
             this.pictureBox1.Image = global::Simulacion1._2._2.Properties.Resources.volver;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 7);
+            this.pictureBox1.Location = new System.Drawing.Point(-41, 7);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(31, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -623,7 +588,7 @@
             // 
             this.pbcRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbcRestaurar.Image = global::Simulacion1._2._2.Properties.Resources.minimizar__3_;
-            this.pbcRestaurar.Location = new System.Drawing.Point(790, 4);
+            this.pbcRestaurar.Location = new System.Drawing.Point(743, 4);
             this.pbcRestaurar.Name = "pbcRestaurar";
             this.pbcRestaurar.Size = new System.Drawing.Size(31, 30);
             this.pbcRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -634,18 +599,101 @@
             // 
             this.pbxCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbxCerrar.Image = global::Simulacion1._2._2.Properties.Resources.cerrar__2_;
-            this.pbxCerrar.Location = new System.Drawing.Point(827, 3);
+            this.pbxCerrar.Location = new System.Drawing.Point(780, 3);
             this.pbxCerrar.Name = "pbxCerrar";
             this.pbxCerrar.Size = new System.Drawing.Size(31, 30);
             this.pbxCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxCerrar.TabIndex = 0;
             this.pbxCerrar.TabStop = false;
             // 
+            // dgvDistribucionTriangular
+            // 
+            this.dgvDistribucionTriangular.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvDistribucionTriangular.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvDistribucionTriangular.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.dgvDistribucionTriangular.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDistribucionTriangular.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvDistribucionTriangular.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDistribucionTriangular.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Cpersona1,
+            this.Cvar,
+            this.CNumA,
+            this.Crj1,
+            this.Cri1});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDistribucionTriangular.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvDistribucionTriangular.EnableHeadersVisualStyles = false;
+            this.dgvDistribucionTriangular.GridColor = System.Drawing.Color.Black;
+            this.dgvDistribucionTriangular.Location = new System.Drawing.Point(282, 303);
+            this.dgvDistribucionTriangular.Name = "dgvDistribucionTriangular";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDistribucionTriangular.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvDistribucionTriangular.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvDistribucionTriangular.Size = new System.Drawing.Size(541, 249);
+            this.dgvDistribucionTriangular.TabIndex = 34;
+            // 
+            // Cpersona1
+            // 
+            this.Cpersona1.HeaderText = "Personas";
+            this.Cpersona1.Name = "Cpersona1";
+            // 
+            // Cvar
+            // 
+            this.Cvar.HeaderText = "Valores";
+            this.Cvar.Name = "Cvar";
+            // 
+            // CNumA
+            // 
+            this.CNumA.HeaderText = "NumAleatorios";
+            this.CNumA.Name = "CNumA";
+            this.CNumA.Width = 130;
+            // 
+            // Crj1
+            // 
+            this.Crj1.HeaderText = "Rj";
+            this.Crj1.Name = "Crj1";
+            // 
+            // Cri1
+            // 
+            this.Cri1.HeaderText = "Ri";
+            this.Cri1.Name = "Cri1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(870, 592);
+            this.ClientSize = new System.Drawing.Size(823, 592);
             this.Controls.Add(this.pntablero);
             this.Controls.Add(this.pnlarriba);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -658,12 +706,12 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDistribucionTriangular)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPseudoaleatorio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGenerador)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbcRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDistribucionTriangular)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -700,12 +748,6 @@
         private ns1.BunifuImageButton btnGenerador;
         private ns1.BunifuCustomLabel bunifuCustomLabel7;
         public WindowsFormsControlLibrary1.BunifuCustomTextbox txtCantidad;
-        private System.Windows.Forms.DataGridView dgvDistribucionTriangular;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CPersona;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cvalor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CNumAleatorio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Crj;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cri;
         private System.Windows.Forms.DataGridView dgvPseudoaleatorio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cvalores;
         private System.Windows.Forms.DataGridViewTextBoxColumn Crn;
@@ -715,6 +757,12 @@
         private ns1.BunifuFlatButton btnGrafico;
         private ns1.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridView dgvDistribucionTriangular;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cpersona1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cvar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CNumA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Crj1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cri1;
     }
 }
 
