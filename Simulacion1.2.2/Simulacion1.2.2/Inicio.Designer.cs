@@ -32,12 +32,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.panelarriba = new System.Windows.Forms.Panel();
             this.paneltablero = new System.Windows.Forms.Panel();
+            this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
+            this.btnEjercicio = new ns1.BunifuThinButton2();
             this.btnAjustes = new ns1.BunifuThinButton2();
             this.btnAplicacion = new ns1.BunifuThinButton2();
             this.bunifuThinButton23 = new ns1.BunifuThinButton2();
             this.pbxMaximizar = new System.Windows.Forms.PictureBox();
             this.pbxCerrar = new System.Windows.Forms.PictureBox();
-            this.bunifuElipse1 = new ns1.BunifuElipse(this.components);
             this.panelarriba.SuspendLayout();
             this.paneltablero.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxMaximizar)).BeginInit();
@@ -59,14 +60,46 @@
             // paneltablero
             // 
             this.paneltablero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(32)))), ((int)(((byte)(156)))));
+            this.paneltablero.Controls.Add(this.btnEjercicio);
             this.paneltablero.Controls.Add(this.btnAjustes);
             this.paneltablero.Controls.Add(this.btnAplicacion);
             this.paneltablero.Controls.Add(this.bunifuThinButton23);
             this.paneltablero.Dock = System.Windows.Forms.DockStyle.Fill;
             this.paneltablero.Location = new System.Drawing.Point(0, 36);
             this.paneltablero.Name = "paneltablero";
-            this.paneltablero.Size = new System.Drawing.Size(204, 190);
+            this.paneltablero.Size = new System.Drawing.Size(204, 255);
             this.paneltablero.TabIndex = 5;
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 20;
+            this.bunifuElipse1.TargetControl = this;
+            // 
+            // btnEjercicio
+            // 
+            this.btnEjercicio.ActiveBorderThickness = 1;
+            this.btnEjercicio.ActiveCornerRadius = 20;
+            this.btnEjercicio.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnEjercicio.ActiveForecolor = System.Drawing.Color.Black;
+            this.btnEjercicio.ActiveLineColor = System.Drawing.Color.Black;
+            this.btnEjercicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(32)))), ((int)(((byte)(156)))));
+            this.btnEjercicio.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEjercicio.BackgroundImage")));
+            this.btnEjercicio.ButtonText = "Ejercicio";
+            this.btnEjercicio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEjercicio.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEjercicio.ForeColor = System.Drawing.Color.White;
+            this.btnEjercicio.IdleBorderThickness = 1;
+            this.btnEjercicio.IdleCornerRadius = 20;
+            this.btnEjercicio.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(184)))), ((int)(((byte)(39)))));
+            this.btnEjercicio.IdleForecolor = System.Drawing.Color.White;
+            this.btnEjercicio.IdleLineColor = System.Drawing.Color.Black;
+            this.btnEjercicio.Location = new System.Drawing.Point(34, 79);
+            this.btnEjercicio.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btnEjercicio.Name = "btnEjercicio";
+            this.btnEjercicio.Size = new System.Drawing.Size(134, 50);
+            this.btnEjercicio.TabIndex = 4;
+            this.btnEjercicio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnEjercicio.Click += new System.EventHandler(this.btnEjercicio_Click);
             // 
             // btnAjustes
             // 
@@ -86,7 +119,7 @@
             this.btnAjustes.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(184)))), ((int)(((byte)(39)))));
             this.btnAjustes.IdleForecolor = System.Drawing.Color.White;
             this.btnAjustes.IdleLineColor = System.Drawing.Color.Black;
-            this.btnAjustes.Location = new System.Drawing.Point(34, 76);
+            this.btnAjustes.Location = new System.Drawing.Point(34, 135);
             this.btnAjustes.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnAjustes.Name = "btnAjustes";
             this.btnAjustes.Size = new System.Drawing.Size(134, 50);
@@ -137,7 +170,7 @@
             this.bunifuThinButton23.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(184)))), ((int)(((byte)(39)))));
             this.bunifuThinButton23.IdleForecolor = System.Drawing.Color.White;
             this.bunifuThinButton23.IdleLineColor = System.Drawing.Color.Black;
-            this.bunifuThinButton23.Location = new System.Drawing.Point(34, 131);
+            this.bunifuThinButton23.Location = new System.Drawing.Point(34, 193);
             this.bunifuThinButton23.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.bunifuThinButton23.Name = "bunifuThinButton23";
             this.bunifuThinButton23.Size = new System.Drawing.Size(134, 50);
@@ -164,16 +197,11 @@
             this.pbxCerrar.TabIndex = 4;
             this.pbxCerrar.TabStop = false;
             // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 20;
-            this.bunifuElipse1.TargetControl = this;
-            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(204, 226);
+            this.ClientSize = new System.Drawing.Size(204, 291);
             this.Controls.Add(this.paneltablero);
             this.Controls.Add(this.panelarriba);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -198,5 +226,6 @@
         private System.Windows.Forms.PictureBox pbxCerrar;
         private System.Windows.Forms.Panel paneltablero;
         private ns1.BunifuElipse bunifuElipse1;
+        private ns1.BunifuThinButton2 btnEjercicio;
     }
 }

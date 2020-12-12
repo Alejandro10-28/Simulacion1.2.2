@@ -28,5 +28,12 @@ namespace Simulacion1._2._2
             form1.Show();
             this.Hide();
         }
+
+        private void btnEjercicio_Click(object sender, EventArgs e)
+        {
+            Ejercicio ejercicio = new Ejercicio();
+            ejercicio.Show();
+            this.Hide();
+        }
     }
 }
